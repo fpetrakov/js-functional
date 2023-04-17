@@ -2,8 +2,8 @@
 reading https://mostly-adequate.gitbook.io/mostly-adequate-guide/
 
 - [x] - chapter 1
-- [ ] - chapter 2
-- [ ] - chapter 3
+- [x] - chapter 2
+- [x] - chapter 3
 - [ ] - chapter 4
 - [ ] - chapter 5
 - [ ] - chapter 6
