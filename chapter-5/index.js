@@ -46,4 +46,5 @@ module.exports = {
 	trace,
 	replace,
 	toLowerCase,
+	toUpperCase,
 }

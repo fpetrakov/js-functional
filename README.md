@@ -7,7 +7,7 @@ reading https://mostly-adequate.gitbook.io/mostly-adequate-guide/
 - [x] - chapter 4
 - [x] - chapter 5
 - [x] - chapter 6
-- [ ] - chapter 7
+- [x] - chapter 7
 - [ ] - chapter 8
 - [ ] - chapter 9
 - [ ] - chapter 10
