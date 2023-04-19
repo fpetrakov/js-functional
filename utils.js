@@ -10,6 +10,28 @@ function curry(fn) {
 	}
 }
 
+const add = curry((a, b) => a + b)
+
+const flip = curry((fn, a, b) => fn(b, a))
+
+const concat = curry((a, b) => a.concat(b))
+
+const append = flip(concat)
+
+const chain = curry((fn, m) => m.chain(fn))
+
+const forEach = curry((fn, xs) => xs.forEach(fn))
+
+const intercalate = curry((str, xs) => xs.join(str))
+
+const join = m => m.join()
+
+const last = xs => xs[xs.length - 1]
+
+const eq = curry((a, b) => a === b)
+
+const always = curry((a, b) => a)
+
 const compose =
 	(...fns) =>
 	(...args) =>
@@ -89,4 +111,15 @@ module.exports = {
 	head,
 	tail,
 	inspect,
+	always,
+	add,
+	flip,
+	append,
+	chain,
+	concat
+	forEach,
+	intercalate,
+	join,
+	last
+	eq,
 }
