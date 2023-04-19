@@ -116,10 +116,10 @@ module.exports = {
 	flip,
 	append,
 	chain,
-	concat
+	concat,
 	forEach,
 	intercalate,
 	join,
-	last
+	last,
 	eq,
 }
