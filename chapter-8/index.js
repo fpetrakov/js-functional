@@ -1,7 +1,4 @@
-const { curry } = require('../chapter-4')
-const { compose } = require('../chapter-5')
-const { prop } = require('../chapter-5/exercises')
-const { match } = require('../chapter-7')
+const { curry, compose, prop, match } = require('../utils')
 
 class Container {
 	constructor(x) {
@@ -107,6 +104,7 @@ const maybe = curry((v, f, m) => {
 })
 
 const getTwenty = compose(
+	/* eslint-disable no-undef */
 	maybe("You're broke", finishTransaction),
 	withdraw(20),
 )

@@ -1,3 +1,8 @@
+const { inspect, curry } = require('../utils')
+
+// momenjs mock
+const moment = () => {}
+
 class Either {
 	static of(x) {
 		return new Right(x)

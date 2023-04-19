@@ -1,7 +1,4 @@
-const { curry } = require('../chapter-4')
-const { toUpperCase, toLowerCase } = require('../chapter-5')
-const head = x => x.slice(0, 1)
-const tail = x => x.slice(1)
+const { head, tail, curry, toUpperCase, toLowerCase } = require('../utils')
 
 // capitalize :: String -> String
 const capitalize = s => toUpperCase(head(s)) + toLowerCase(tail(s))
@@ -36,11 +33,3 @@ Parametricity
 // means 'a' must implement Ord interface
 
 // assertEqual :: (Eq a, Show a) => a -> a -> Assertion
-
-module.exports = {
-	head,
-	tail,
-	match,
-	map,
-	reduce,
-}

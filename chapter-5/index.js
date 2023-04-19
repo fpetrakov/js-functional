@@ -1,11 +1,11 @@
-const { curry } = require('../chapter-4/index')
+const {
+	curry,
+	replace,
+	compose,
+	toUpperCase,
+	toLowerCase,
+} = require('../utils')
 
-const compose =
-	(...fns) =>
-	(...args) =>
-		fns.reduceRight((res, fn) => [fn.call(null, ...res)], args)[0]
-
-const toUpperCase = x => x.toUpperCase()
 const exclaim = x => `${x}!`
 const shout = compose(exclaim, toUpperCase)
 console.log(shout('hello there'))
@@ -14,8 +14,6 @@ console.log(shout('hello there'))
 // compose(f, compose(g, h)) === compose(compose(f, g), h)
 
 // pointfree style can be useful because it makes functions more generic and so reusable
-const toLowerCase = s => s.toLowerCase()
-const replace = curry((re, rpl, str) => str.replace(re, rpl))
 const snakeCaseFree = compose(replace(/\s+/gi, '_'), toLowerCase)
 // not pointfree
 const snakeCaseNotFree = word => word.toLowerCase().replace(/\s+/gi, '_')
@@ -40,11 +38,3 @@ const isFourLetterWord = compose(f, g)
 // - A distinguished morphism called identity
 
 const id = x => x
-
-module.exports = {
-	compose,
-	trace,
-	replace,
-	toLowerCase,
-	toUpperCase,
-}
