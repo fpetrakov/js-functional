@@ -68,3 +68,10 @@ const either = curry((f, g, e) => {
 
 	return result
 })
+
+module.exports = {
+	either,
+	Left,
+	Right,
+	Either,
+}

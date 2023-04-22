@@ -108,3 +108,7 @@ const getTwenty = compose(
 	maybe("You're broke", finishTransaction),
 	withdraw(20),
 )
+
+module.exports = {
+	Maybe,
+}
